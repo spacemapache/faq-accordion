@@ -1,0 +1,64 @@
+body {
+  background-color: hsl(239, 45%, 20%);
+  font-family: "Space Mono", monospace;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.faq-questions {
+  border: 1px solid black;
+  width: 600px;
+  background-color: white;
+  margin: 50px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.faq-questions h1 {
+  text-align: center;
+}
+
+#accordion li {
+  list-style: none;
+  padding: 10px;
+}
+
+#accordion li label {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: rgb(102, 25, 25);
+}
+
+#accordion li label span {
+  transform: rotate(90deg);
+  font-size: 15px;
+}
+
+#accordion label + input[type="radio"] {
+  display: none;
+}
+
+#accordion .content {
+  padding: 0 10px;
+  line-height: 26px;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+#accordion label + input[type="radio"]:checked + .content {
+  max-height: 400px;
+}
+
+#accordion p {
+  font-size: 12px;
+}
